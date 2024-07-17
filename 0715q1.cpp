@@ -11,10 +11,11 @@ int main() {
         for (int j = 0; j < n - i-1; j++) {
             cout << " ";
         }
-        // 數字
+        // 數字前半部分
         for (int j = 0; j <= i; j++) {
             cout << j+1;
         }
+        // 數字後半部分
         for (int j = i; j>=1; --j){
             cout << j;
 
