@@ -16,6 +16,13 @@ int main() {
 
     cout << "Please input two intergers: ";
     cin >> num1 >> num2 ;
+
+    // 確保num2永遠比較大
+    if(num1>num2){
+        int temp1 = num1;
+        num1 = num2;
+        num2 = temp1;
+    }
     
     int result = add(num1 , num2);
 
