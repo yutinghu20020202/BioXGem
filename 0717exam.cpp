@@ -15,16 +15,16 @@ int main() {
     
     
     if (average >= 90 && average <= 100) {
-        printf("A\n");
+        printf("Grade: A\n");
     } else if (average >=80 && average < 90) {
-        printf("B\n");
+        printf("Grade: B\n");
     } else if (average >=70 && average < 80) {
-        printf("C\n");
+        printf("Grade: C\n");
     } else if (average >=60 && average < 70) {
-        printf("D\n");
+        printf("Grade: D\n");
 
     } else {
-        printf("F\n");
+        printf("Grade: F\n");
 
     }
 

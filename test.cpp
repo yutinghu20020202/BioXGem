@@ -1,55 +1,47 @@
-#include <iostream> 
-
+#include <iostream>
+#include <cstdlib>  // 包含 <cstdlib> 庫
+#include <ctime>    // 包含 <ctime> 庫，用於設置隨機數種子
 using namespace std;
 
-// 定義一個函數，負責進行質因數分解
-void primeFactorization(int n) {
-    bool first = true;  // 標誌變量，用來追蹤是否是第一次輸出質因數
+bool first = true;
 
-    // 找到2的所有因數
-    while (n % 2 == 0) {  // 當 n 可以被2整除時執行
-        if (first) {  // 如果是第一次輸出
-            cout << 2;  // 輸出質因數2
-            first = false;  // 將標誌變量設為false
-        } else {  // 如果不是第一次輸出
-            cout << " * " << 2;  // 輸出 * 2
-        }
-        n /= 2;  // 將 n 除以2
-    }
-
-    // 找到其餘奇數的因數
-    for (int i = 3; i * i <= n; i += 2) {  // 從3開始，檢查每個奇數
-        while (n % i == 0) {  // 當 n 可以被 i 整除時執行
-            if (first) {  // 如果是第一次輸出
-                cout << i;  // 輸出質因數 i
-                first = false;  // 將標誌變量設為false
-            } else {  // 如果不是第一次輸出
-                cout << " * " << i;  // 輸出 * i
-            }
-            n /= i;  // 將 n 除以 i
-        }
-    }
-
-    // 如果 n 是質數且大於2
-    if (n > 2) {  // 檢查剩餘的 n 是否為質數
-        if (first) {  // 如果是第一次輸出
-            cout << n;  // 輸出質因數 n
-        } else {  // 如果不是第一次輸出
-            cout << " * " << n;  // 輸出 * n
-        }
-    }
-
-    cout << endl;  // 輸出換行符號
-}
-
-// 主函數
 int main() {
-    int n; 
-    cout << "Please input an integer: ";
-    cin >> n;
+    srand(time(0));  // 使用當前時間設置隨機數種子
 
-    cout << n << " = ";  // 輸出 n =
-    primeFactorization(n);  // 調用質因數分解函數
+    int randomNumber[4]; //裡面裝四個東西
+    for (int i = 0; i<4; i++){
+        randomNumber[i] = rand()%10;
+        cout << randomNumber[i];
+    }
+    cout << endl;
 
+
+
+    int num[4], a=0, b=0, c=0;
+    cout << "Please input four digits (0~9): ";
+    cin >> c;
+    while(a!=4){
+        cout << "Please input four digits (0~9): ";
+        cin >> c;
+        num[0] = c/1000;
+        num[1] = c/100-num[0]*10;
+        num[2] = c/10-num[0]*100-num[1]*10;
+        num[3] = c%10;
+
+        for(int m=0; m<4; m++){
+            if(num[m] == randomNumber[m]){;
+            a++;
+            }else{
+                for(int n=0; n<4; m++){
+                    if(num[m]==randomNumber[n] && num[m]!=randomNumber[m]){
+                        b++;
+                    }
+                }
+            }
+            cout << "The result is " << a << "A" << b << "B" << endl;
+            break;
+        }
+    }
+        
     return 0;
 }

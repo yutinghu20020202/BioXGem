@@ -17,15 +17,15 @@ int main() {
     
     
     if (average >= 90 && average <= 100) {
-        cout << "A" << endl;
+        cout << "Grade: A" << endl;
     } else if (average >=80 && average < 90) {
-        cout << "B" << endl;
+        cout << "Grade: B" << endl;
     } else if (average >=70 && average < 80) {
-        cout << "C" << endl;
+        cout << "Grade: C" << endl;
     } else if (average >=60 && average < 70) {
-        cout << "D" << endl;
+        cout << "Grade: D" << endl;
     } else {
-        cout << "F" << endl;
+        cout << "Grade: F" << endl;
     }
 
     return 0;
