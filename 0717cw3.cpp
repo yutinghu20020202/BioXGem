@@ -10,11 +10,11 @@ void primeFactorization(int n) {
     while (n % 2 == 0) {  // 當 n 可以被2整除時執行
         if (first) {  // 如果是第一次輸出
             cout << 2;  // 輸出質因數2
-            first = false;  // 將標誌變量設為false
+            first = false;  // 如果沒設為false就不會出現下面else的部分ex:2222
         } else {  // 如果不是第一次輸出
             cout << " * " << 2;  // 輸出 * 2
         }
-        n /= 2;  // 將 n 除以2
+        n =n/ 2;  // 將 n 除以2
     }
 
     // 找到其餘奇數的因數
