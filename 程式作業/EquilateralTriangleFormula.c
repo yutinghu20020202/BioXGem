@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-float triangle(int a=0){
+float triangle(int a){
     return 1.7320508*a*a/4;
 }
 
