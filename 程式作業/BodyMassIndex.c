@@ -8,7 +8,7 @@ float bmi(int h, int w){
 int main () {
     int x=0, y=0;
     float bodyMassIndex=0;
-    printf("Please input your height(in cm) and weight(in kg).\n");
+    
     scanf("%d %d", &x, &y);
     if( x >= 100 && x <= 200){
         if(y >= 0 && y <= 100){
