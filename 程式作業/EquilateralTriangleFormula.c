@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 float triangle(int a){
-    return 1.7320508*a*a/4;
+    return 1.7320508f*a*a/4;
 }
 
 int main () {
