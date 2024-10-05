@@ -2,33 +2,33 @@
 
 int main () {
     int num;
-    char str[1000];
-    int cap = 1, i = 0;
+    char str[10000];
+    int cap = 1;
 
     scanf("%d", &num);
     getchar();
     scanf("%[^\n]", str);
 
     for(int i =0; str[i]!='\0'; i++){
-        if(str[i]==44 || str[i]==46 || str[i]==59){
+        if(str[i]==',' || str[i]=='.' || str[i]==';'){
             printf("\n");
             cap = 1;
-        }else if(str[i]== ' '){//空格不是0，其他符號才是（考試小心）
+        }else if(str[i]== ' '){
             printf(" ");
             cap = 1;
         }else{
             if(cap){
-                if(str[i]>90){
-                    str[i] -= 32;
-                    printf("%c", str[i]);
-                    cap=0;
+                if(str[i]>= 'a' && str[i]<= 'z'){
+                    printf("%c", str[i]-'a'+'A');
+                
                 }else{
                     printf("%c", str[i]);
+                    
                 }
+                cap=0;
             }else{
-                if(str[i]<91){
-                    str[i] += 32;
-                    printf("%c", str[i]);
+                if(str[i]>='A'&& str[i]<='Z' ){
+                    printf("%c", str[i]-'A'+'a');
                 }else{
                     printf("%c", str[i]);
                 }
