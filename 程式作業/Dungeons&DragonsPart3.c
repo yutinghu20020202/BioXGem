@@ -9,8 +9,8 @@ int main () {
     num3 = 0x1C71C71C71C71C71LLU ;
     mod = 0x7CE66C50E2840000LLU;
     sum = (d1*num1) % mod;
-    sum = ((sum + (d2*num2)) % mod)%mod;
-    sum = ((sum + (d3*num3)) % mod)%mod;
+    sum = (sum + (d2*num2)% mod)%mod;
+    sum = (sum + (d3*num3)% mod)%mod;
     
     printf("%llu\n", sum);//llu沒有負數，lld有
 
