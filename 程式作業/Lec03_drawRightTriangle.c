@@ -4,7 +4,7 @@ int main () {
     int i, j;
     scanf("%d %d", &i, &j);
     if(i==1){//左上
-        for(int row = j; row>0; row--){//遞減
+        for(int row = j; row>0; row--){//遞減是指星號
             for(int col = 0; col<row; col++){
                 printf("*");
             }

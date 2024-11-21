@@ -4,7 +4,7 @@
 //00000001 | 00000010 | 00000011 | 00000100(輸進去電腦會自動變成二進位)
 //1st byte | 2nd byte | 3rd byte | 4th byte
 
-unsigned char get_byte(int N, int n){
+unsigned int get_byte(int N, int n){
     return (N >> ((4-n)*8)) & 0xFF; 
     /*0xFF: 00000000 0000000 0000000 11111111 / 0xFFFF: 00000000 00000000 11111111 11111111*/
 }

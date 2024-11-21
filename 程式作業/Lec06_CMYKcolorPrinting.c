@@ -69,7 +69,6 @@ void CMYK_to_RGB()
         }
     }
 
-
 }
 int main()
 {
